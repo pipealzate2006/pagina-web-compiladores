@@ -1,0 +1,60 @@
+@import "@heroui/styles";
+
+.dark,
+[data-theme="dark"] {
+  --background: #0b0b0c;
+  --foreground: #ededea;
+  --surface: #141415;
+  --surface-secondary: #1b1b1d;
+  --surface-tertiary: #222225;
+  --overlay: #161618;
+  --field-background: #141415;
+  --default: #222225;
+  --muted: #8e8e93;
+  --border: #262629;
+  --separator: #1e1e21;
+
+  --accent: #0058d0;
+  --accent-foreground: #ffffff;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background-color: var(--accent);
+  color: var(--accent-foreground);
+}
+
+.revelar {
+  opacity: 0;
+  transform: translateY(20px);
+  transition:
+    opacity 0.7s cubic-bezier(0.2, 0.7, 0.2, 1),
+    transform 0.7s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+.revelar.visible {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .revelar {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
