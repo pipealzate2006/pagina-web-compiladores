@@ -19,11 +19,6 @@ export default function Proyecto() {
               El proyecto <span className="text-accent">final</span>
             </h2>
 
-            <p className="mt-6 max-w-2xl text-lg leading-relaxed text-muted">
-              Espacio destinado para presentar el proyecto desarrollado durante
-              la asignatura.
-            </p>
-
             {ID_VIDEO_DRIVE ? (
               <div className="mt-10 aspect-video overflow-hidden rounded-xl border border-border bg-black">
                 <iframe
