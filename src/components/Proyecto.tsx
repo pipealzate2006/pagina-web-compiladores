@@ -22,10 +22,17 @@ export default function Proyecto() {
               la asignatura.
             </p>
 
-            <p className="mt-10 inline-flex w-fit items-center gap-2 rounded-full border border-dashed border-border px-4 py-2 text-sm text-muted">
-              <span className="size-1.5 rounded-full bg-accent" />
-              Pendiente: el material del proyecto aún no se ha agregado.
-            </p>
+            <div className="mt-10 overflow-hidden rounded-xl border border-border bg-black">
+              <video
+                src={`${import.meta.env.BASE_URL}video/proyecto.mp4`}
+                controls
+                preload="metadata"
+                playsInline
+                className="aspect-video w-full"
+              >
+                Tu navegador no puede reproducir este video.
+              </video>
+            </div>
           </Card>
         </Revelar>
       </div>
